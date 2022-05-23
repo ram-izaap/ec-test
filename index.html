@@ -56,6 +56,31 @@
     };
 })(window, document, navigator);
     
+  function ddd(text) {
+    // Create a new textarea element and give it id='t'
+    let textarea: any = document.createElement('textarea')
+    textarea.id = 't'
+    // Optional step to make less noise on the page, if any!
+    textarea.style.height = 0
+    // Now append it to your page somewhere, I chose <body>
+    document.body.appendChild(textarea)
+    // Give our textarea a value of whatever inside the div of id='to-copy'
+    textarea.value = text
+    // Now copy whatever inside the textarea to clipboard
+    let selector: any = document.querySelector('#t')
+    selector.select()
+    document.execCommand('copy')
+    // Remove the textarea
+    document.body.removeChild(textarea) 
+    
+  }
+    
+    
+    function light1() {
+  alert(33);
+  ddd('new text to be copied!!!!!!!!!');
+    alert(44);
+}
     
 function light() {
   alert(11);
@@ -63,7 +88,7 @@ function light() {
     alert(22);
 }
 </script>
-<h2 onclick="light()">COPY CLIP</h2>
+<h2 onclick="light1()">COPY CLIP</h2>
 
 </body>
 </html>
