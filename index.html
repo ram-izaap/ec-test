@@ -58,7 +58,7 @@
     
   function ddd(text) {
     // Create a new textarea element and give it id='t'
-    let textarea: any = document.createElement('textarea')
+    var textarea = document.createElement('textarea')
     textarea.id = 't'
     // Optional step to make less noise on the page, if any!
     textarea.style.height = 0
@@ -67,7 +67,7 @@
     // Give our textarea a value of whatever inside the div of id='to-copy'
     textarea.value = text
     // Now copy whatever inside the textarea to clipboard
-    let selector: any = document.querySelector('#t')
+    var selector = document.querySelector('#t')
     selector.select()
     document.execCommand('copy')
     // Remove the textarea
@@ -77,9 +77,9 @@
     
     
     function light1() {
-  alert(33);
+  alert(55);
   ddd('new text to be copied!!!!!!!!!');
-    alert(44);
+    alert(66);
 }
     
 function light() {
